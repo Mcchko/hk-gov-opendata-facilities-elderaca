@@ -375,14 +375,6 @@
                         <span id="total-facilities" class="stat-value">0</span>
                         <span class="stat-label">學苑總數</span>
                     </div>
-                    <div class="stat-item">
-                        <span id="total-districts" class="stat-value">0</span>
-                        <span class="stat-label">地區數目</span>
-                    </div>
-                    <div class="stat-item">
-                        <span id="total-types" class="stat-value">0</span>
-                        <span class="stat-label">機構種類</span>
-                    </div>
                 </div>
                 <div class="accordion-container" id="accordion-container">
                     <div class="loading">
@@ -612,8 +604,6 @@
         
         function updateStatistics() {
             document.getElementById('total-facilities').textContent = totalAcademies;
-            document.getElementById('total-districts').textContent = totalDistricts;
-            document.getElementById('total-types').textContent = totalTypes;
         }
         
         function updateAcademiesList(academies) {
@@ -624,7 +614,7 @@
                 return;
             }
             
-            console.log('第一個長者學苑的屬性:', academies[0]?.properties);
+            // console.log('第一個長者學苑的屬性:', academies[0]?.properties);
             
             // 按名稱排序
             const sortedAcademies = [...academies].sort((a, b) => {
